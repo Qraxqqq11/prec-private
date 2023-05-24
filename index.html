@@ -579,9 +579,10 @@
     for (var i = 0; i < images.length; i++) {
       var img = images[i];
       var aspectRatio = img.naturalWidth / img.naturalHeight;
-      img.parentNode.style.paddingBottom = (1 / aspectRatio) * 100 + '%';
-      img.style.width = '100%';
-      img.style.height = 'auto';
+      var parentWidth = img.parentNode.offsetWidth;
+      var padding = (1 / aspectRatio) * 100 + '%';
+      img.style.paddingBottom = padding;
+      img.style.maxWidth = '100%';
     }
   }
 
