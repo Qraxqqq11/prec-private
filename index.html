@@ -558,22 +558,39 @@
     <div class="auto-container">
         <h2>We work with our partners to provide project perfection, <span class="theme_color">Check Them!</span></h2>
         <div class="sponsors-outer">
-            <!--Sponsors Carousel-->
-            <ul class="sponsors-carousel-two owl-carousel owl-theme">
-                <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/1.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/2.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/3.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/4.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/5.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/6.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/1.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/2.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/3.png" alt=""></a></figure></li>
-                <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/4.png" alt=""></a></figure></li>
-            </ul>
-        </div>
-    </div>
-</section>
+<ul id="sponsors-carousel" class="sponsors-carousel-two owl-carousel owl-theme">
+  <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/1.png" alt=""></a></figure></li>
+  <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/2.png" alt=""></a></figure></li>
+  <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/3.png" alt=""></a></figure></li>
+  <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/4.png" alt=""></a></figure></li>
+  <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/5.png" alt=""></a></figure></li>
+  <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/6.png" alt=""></a></figure></li>
+  <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/1.png" alt=""></a></figure></li>
+  <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/2.png" alt=""></a></figure></li>
+  <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/3.png" alt=""></a></figure></li>
+  <li class="slide-item"><figure class="image-box"><a href="#"><img class="responsive-image" src="images/clients/4.png" alt=""></a></figure></li>
+</ul>
+
+<script>
+  // Function to adjust the aspect ratio and padding of the images
+  function adjustImages() {
+    var carousel = document.getElementById('sponsors-carousel');
+    var images = carousel.getElementsByTagName('img');
+    for (var i = 0; i < images.length; i++) {
+      var img = images[i];
+      var aspectRatio = img.naturalWidth / img.naturalHeight;
+      var parentWidth = img.parentNode.offsetWidth;
+      var padding = (1 / aspectRatio) * 100 + '%';
+      img.style.paddingBottom = padding;
+      img.style.maxWidth = '100%';
+    }
+  }
+
+  // Call the adjustImages function when the window is loaded and resized
+  window.addEventListener('load', adjustImages);
+  window.addEventListener('resize', adjustImages);
+</script>
+
 		
 
     </section>
